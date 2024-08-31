@@ -23,7 +23,7 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
-const PORT = 'https://job-scan-backend.onrender.com/';
+const PORT = process.env.PORT || 3000';
 
 
 // api's
