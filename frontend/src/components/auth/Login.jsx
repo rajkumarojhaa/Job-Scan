@@ -57,7 +57,9 @@ const Login = () => {
         <div>
     <Navbar />
     <div className='flex items-center justify-center px-4 sm:px-6 lg:px-8 w-full max-w-7xl mx-auto  h-full max-h-max '>
-        <form onSubmit={submitHandler} className='w-full sm:w-3/4 md:w-1/2 lg:w-1/3 border border-gray-200 bg-neutral-100 rounded-md p-6 sm:p-8 lg:p-10 my-10 '>
+        <form onSubmit={submitHandler} className='w-full sm:w-3/4 md:w-1/2 lg:w-1/3 bg-neutral-100 dark:bg-zinc-900 
+        border border-gray-100 dark:border-gray-700 
+        text-gray-900 dark:text-white rounded-md p-6 sm:p-8 lg:p-10 my-10 '>
             <h1 className='font-bold text-2xl mb-5 text-center'>Login</h1>
             <div className='my-4'>
                 <Label>Email</Label>

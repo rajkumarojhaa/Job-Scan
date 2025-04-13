@@ -22,7 +22,9 @@ const Profile = () => {
     return (
         <div>
             <Navbar />
-            <div className='max-w-4xl sm:mx-auto mx-4 bg-white border border-gray-200 rounded-2xl my-5 p-8'>
+            <div className='max-w-4xl sm:mx-auto mx-4 bg-neutral-100 dark:bg-zinc-900 
+        border border-gray-100 dark:border-gray-700 
+        text-gray-900 dark:text-white rounded-2xl my-5 p-8'>
                 <div className='flex justify-between'>
                     <div className='flex items-center gap-4'>
                         <Avatar className="h-24 w-24">
@@ -60,7 +62,7 @@ const Profile = () => {
                     }
                 </div>
             </div>
-            <div className='max-w-4xl mx-auto bg-white rounded-2xl'>
+            <div className='max-w-4xl mx-auto  rounded-2xl'>
                 <h1 className='font-bold text-lg my-5 ml-5'>Applied Jobs</h1>
                 {/* Applied Job Table   */}
                 <AppliedJobTable />
