@@ -12,7 +12,6 @@ dotenv.config({});
 
 const app = express();
 
-// middleware
 
 const allowedOrigins = [
   "http://localhost:5173", // local dev frontend
@@ -34,7 +33,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 10000;
 
 // api's
 app.use("/api/v1/user", userRoute);
@@ -42,7 +41,16 @@ app.use("/api/v1/company", companyRoute);
 app.use("/api/v1/job", jobRoute);
 app.use("/api/v1/application", applicationRoute);
 
+
 app.listen(PORT, () => {
   connectDB();
   console.log(`Server running at port ${PORT}`);
 });
+
+
+
+app.listen(PORT,()=>{
+    connectDB();
+    console.log(`Server running at port ${PORT}`);
+})
+
