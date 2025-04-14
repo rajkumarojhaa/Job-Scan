@@ -62,6 +62,15 @@ export const updateJob = async (req, res) => {
     }
 };
 
+export const deleteJobController = async (req, res) => {
+    const { id } = req.params;
+    const job = await Job.findByIdAndDelete(id);
+    if (!job) {
+      return res.status(404).json({ message: 'Job not found' });
+    }
+    res.status(200).json({ message: 'Job deleted successfully' });
+  };
+  
 
 // student k liye
 export const getAllJobs = async (req, res) => {

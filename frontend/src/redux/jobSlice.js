@@ -37,6 +37,9 @@ const jobSlice = createSlice({
         },
         setFilters: (state, action) => {
             state.filters = action.payload;
+        },
+        removeAdminJobById: (state, action) => {
+            state.allAdminJobs = state.allAdminJobs.filter(job => job._id !== action.payload);
         }
     }
 });
@@ -48,7 +51,8 @@ export const {
     setSearchJobByText,
     setAllAppliedJobs,
     setSearchedQuery,
-    setFilters // ✅ Make sure this is exported now
+    setFilters ,
+    removeAdminJobById 
 } = jobSlice.actions;
 
 export default jobSlice.reducer;
