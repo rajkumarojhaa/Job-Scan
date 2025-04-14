@@ -33,6 +33,36 @@ export const postJob = async (req, res) => {
         console.log(error);
     }
 }
+
+export const updateJob = async (req, res) => {
+    try {
+        const jobId = req.params.id;
+        const { title, description, requirements, salary, location, jobType, experience, position, companyId } = req.body;
+
+        const updatedJob = await Job.findByIdAndUpdate(jobId, {
+            title,
+            description,
+            requirements: requirements.split(","),
+            salary: Number(salary),
+            location,
+            jobType,
+            experienceLevel: experience,
+            position,
+            company: companyId
+        }, { new: true });
+
+        if (!updatedJob) {
+            return res.status(404).json({ message: "Job not found", success: false });
+        }
+
+        return res.status(200).json({ message: "Job updated successfully", success: true, job: updatedJob });
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({ message: "Server error", success: false });
+    }
+};
+
+
 // student k liye
 export const getAllJobs = async (req, res) => {
     try {
