@@ -14,6 +14,8 @@ import AdminJobs from "./components/admin/AdminJobs";
 import PostJob from './components/admin/PostJob'
 import Applicants from './components/admin/Applicants'
 import ProtectedRoute from './components/admin/ProtectedRoute'
+import JobNotificationPage from './components/JobNotificationPage'
+import RemoteJobSearchPage from './components/RemoteJobSearchPage'
 
 
 const appRouter = createBrowserRouter([
@@ -34,12 +36,20 @@ const appRouter = createBrowserRouter([
     element: <Jobs />
   },
   {
+    path: "/job-notification",
+    element: <JobNotificationPage />
+  },
+  {
     path: "/description/:id",
     element: <JobDescription />
   },
   {
     path: "/browse",
     element: <Browse />
+  },
+  {
+    path: "/remote-job-search",
+    element: <RemoteJobSearchPage />
   },
   {
     path: "/profile",

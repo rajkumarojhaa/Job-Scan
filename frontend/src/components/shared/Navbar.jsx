@@ -58,16 +58,18 @@ const Navbar = () => {
         <div className='bg-slate-100 dark:bg-zinc-900 dark:text-white shadow-sm  w-full z-50'>
             <div className='flex items-center justify-between mx-auto max-w-7xl h-16 px-4'>
 
+                
+
+                {/* Logo */}
+                <div className='mx-auto sm:mx-0 text-center sm:text-left'>
+                    <h1 className='text-xl sm:text-2xl font-bold'>Job<span className='text-[#F83002]'>Scan</span></h1>
+                </div>
+                
                 {/* Burger icon for mobile */}
                 <div className='sm:hidden' id='burger'>
                     <Button variant='ghost' size='icon' onClick={toggleMenu}>
                         {isOpen ? <X /> : <Menu />}
                     </Button>
-                </div>
-
-                {/* Logo */}
-                <div className='mx-auto sm:mx-0 text-center sm:text-left'>
-                    <h1 className='text-xl sm:text-2xl font-bold'>Job<span className='text-[#F83002]'>Scan</span></h1>
                 </div>
 
                 {/* Right side */}
@@ -85,6 +87,8 @@ const Navbar = () => {
                                     <li><Link to="/">Home</Link></li>
                                     <li><Link to="/jobs">Jobs</Link></li>
                                     <li><Link to="/browse">Browse</Link></li>
+                                    <li><Link to="/job-notification">Notify</Link></li>
+                                    <li><Link to="/remote-job-search">Remote</Link></li>
                                 </>
                             )
                         }
@@ -161,6 +165,8 @@ const Navbar = () => {
                                     <li><Link to="/">Home</Link></li>
                                     <li><Link to="/jobs">Jobs</Link></li>
                                     <li><Link to="/browse">Browse</Link></li>
+                                    <li><Link to="/job-notification">Notify</Link></li>
+                                    <li><Link to="/remote-job-search">Remote</Link></li>
                                 </>
                             )
                         }
